@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class Time {
+   private:
+      int hours, minutes, seconds;
+
+   public:
+      void getTime() {
+         cout << "Enter time:" << endl;
+         cout << "Hours? ";    cin >> hours;
+         cout << "Minutes? ";  cin >> minutes;
+         cout << "Seconds? ";  cin >> seconds;
+      }
+
+      int calculateTotalSeconds() {
+         return hours * 3600 + minutes * 60 + seconds;
+      }
+};
+
+int main() {
+   Time t;
+   t.getTime();
+   int totalSeconds = t.calculateTotalSeconds();
+   cout << "Total seconds = " << totalSeconds << endl;
+   return 0;
+}
